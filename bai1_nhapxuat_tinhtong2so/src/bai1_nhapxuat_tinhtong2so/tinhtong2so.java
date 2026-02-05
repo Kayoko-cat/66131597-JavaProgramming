@@ -10,10 +10,10 @@ public class tinhtong2so {
 		Scanner banPhim = new Scanner(System.in);
 		
 		//In ra thông tin, mời người dùng nhập số thứ nhất
-		System.out.printf("Moi nhap so thu nhat: ");
+		System.out.print("Moi nhap so thu nhat: ");
 		num1= banPhim.nextDouble();
 		//In ra thong tin, mời người dùng nhập số thứ hai
-		System.out.printf("Moi nhap so thu hai: ");
+		System.out.print("Moi nhap so thu hai: ");
 		num2= banPhim.nextDouble();
 
         //tinh toan
