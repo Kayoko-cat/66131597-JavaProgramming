@@ -1,6 +1,6 @@
 package btsinhvien;
 
-public class doituong {
+public class Sinhvien {
 //thuoctinh
 	String ten;
 	int tuoi;
