@@ -11,7 +11,13 @@ public class quydoitiente {
 	System.out.print("tien eur : ");
 	double tieneur= sc.nextDouble();
 
-	
+    
+	double usd  = tienusd * 23500;
+    double eur = tieneur * 27000;
+    System.out.println("vnd sang usd : " + usd);
+    System.out.println("vnd sang eur : " + eur);
+    sc.close();
+    
 	}
 
 }
