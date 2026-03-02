@@ -22,5 +22,6 @@ public class giaiptbac1 {
             System.out.println("Nghiem x = " + x);
 
 	}
-
+   sc.close();
+}
 }
