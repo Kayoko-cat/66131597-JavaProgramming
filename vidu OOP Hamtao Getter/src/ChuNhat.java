@@ -52,4 +52,14 @@ public class ChuNhat {
     {
         this.rong = rong;
     }
+   // phuong thuc khac
+    public String toString(){
+    	// tom tat cac thong tin 
+    	// thanh 1 chuoi , de in ra man hinh 
+    	String s="Hinh nay , co chieu dai = " ;
+    	s = s +dai;
+    	s= s+ " va chieu rong = " + rong ;
+    	//s= "hinh nay co chieu dai ="+ dai + " va chieu rong ="+ rong;
+    	return s;
+    }
 }
