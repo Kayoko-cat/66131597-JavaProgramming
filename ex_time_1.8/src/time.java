@@ -4,7 +4,7 @@ public class time {
     private int minute;
     private int second;
 
-    public Time(int hour, int minute, int second) {
+    public time(int hour, int minute, int second) {
         this.hour = hour;
         this.minute = minute;
         this.second = second;
@@ -42,7 +42,7 @@ public class time {
     public String toString() {
         return String.format("%02d:%02d:%02d", hour, minute, second);
     }
-    public Time nextSecond() {
+    public time nextSecond() {
         second++;
         if (second == 60) {
             second = 0;
@@ -59,7 +59,7 @@ public class time {
         }
         return this;
     }
-    public Time previousSecond() {
+    public time previousSecond() {
         second--;
         if (second < 0) {
             second = 59;
