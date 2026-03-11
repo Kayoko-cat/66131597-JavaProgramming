@@ -2,12 +2,12 @@ public class account {
     private String id;
     private String name;
     private int balance = 0;
-    public Account(String id, String name) 
+    public account(String id, String name) 
     {
         this.id = id;
         this.name = name;
     }
-    public Account(String id, String name, int balance) 
+    public account(String id, String name, int balance) 
     {
         this.id = id;
         this.name = name;
