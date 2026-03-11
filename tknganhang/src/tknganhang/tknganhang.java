@@ -27,9 +27,15 @@ public tknganhang(String soTaiKhoan, String tenChuTaiKhoan, double soDu) {
     this.soDu = (soDu >= 0) ? soDu : 0.0;
 }
 
-public String getSoTaiKhoan() { return soTaiKhoan; }
-public String getTenChuTaiKhoan() { return tenChuTaiKhoan; }
-public double getSoDu() { return soDu; }
+public String getSoTaiKhoan() { 
+	return soTaiKhoan; 
+	}
+public String getTenChuTaiKhoan() { 
+	return tenChuTaiKhoan; 
+	}
+public double getSoDu() {
+	return soDu;
+}
 
 public void setTenChuTaiKhoan(String ten) {
     if (ten != null && ten.length() > 0) {
