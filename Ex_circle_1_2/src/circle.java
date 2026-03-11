@@ -8,4 +8,12 @@ public class circle {
 	public circle(double radius) {
 		this.radius = radius;
 	}
+	// getter & setter
+	public double getRadius() {
+		return 	radius;
+	}
+	public void setRadius(double radius) {
+	  this.radius = radius;	
+	}
+	
 }
