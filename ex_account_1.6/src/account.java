@@ -41,7 +41,7 @@ public class account {
         }
         return balance;
     }
-    public int transferTo(Account another, int amount) 
+    public int transferTo(account another, int amount) 
     {
         if (amount <= balance) 
         {
