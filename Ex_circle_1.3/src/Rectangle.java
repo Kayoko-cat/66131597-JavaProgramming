@@ -1,30 +1,48 @@
 
 public class Rectangle {
-
-	public class Retamgle {
-	    private float length = 1.0f;  // chiều dài, mặc định = 1.0
-	    private float width  = 1.0f;  // chiều rộng, mặc định = 1.0
+	private float length;
+	private float width;
+	public Rectangle()
+	{
+		length = 1.0f;
+		width = 1.0f;
 	}
-	
-	public Rectangle() { }
-
-	// Hàm tạo có tham số
-	public Rectangle(float length, float width) {
-	    this.length = length;
-	    this.width  = width;
+	// constructor 
+	public Rectangle(float length, float width)
+	{
+		this.length = length;
+		this.width = width;
 	}
-	// getter setter
-	public float getLength() {
-	    return length;
+	// getter setter 
+	public float getLength()
+	{
+		return this.length;
 	}
-	public void setLength(float length) {
-	    this.length = length;
+	public float getWidth()
+	{
+		return this.width;
 	}
-
-	public float getWidth() {
-	    return width;
+	public void setLength(float length)
+	{
+		this.length = length;
 	}
-	public void setWidth(float width) {
-	    this.width = width;
+	public void setWidth(float width)
+	{
+		this.width = width;
+	}
+	// cong thuc tinh
+	public double getArea()
+	{
+		return length * width;
+	}
+	public double getPerimeter()
+	{
+		return  2 * (length + width);
+	}
+	// toString
+	public String toString()
+	{
+		String res = "Rectangle[length=" + length + ",width=" + width + "]";
+		return res;
 	}
 }
