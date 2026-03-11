@@ -16,4 +16,17 @@ public class circle {
 	  this.radius = radius;	
 	}
 	
+	 public double getArea() {
+	        return Math.PI * radius * radius;
+	    }
+
+	    // Bước 5: Chu vi = 2 * π * r
+	    public double getCircumference() {
+	        return 2 * Math.PI * radius;
+	    }
+	    // toString
+	    public String toString() {
+	        return "Hình tròn[bán kính=" + radius + "]";
+	    }
+	
 }
