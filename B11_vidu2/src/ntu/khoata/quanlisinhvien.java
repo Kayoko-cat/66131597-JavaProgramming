@@ -75,4 +75,41 @@ public class quanlisinhvien {
             }
         }
     }
+ // Hiển thị toàn bộ sinh viên
+    public void hienThiDanhSach() {
+        if (danhSachSV.isEmpty()) {
+            System.out.println("Danh sách sinh viên trống!");
+            return;
+        }
+        
+        System.out.println("\n=== DANH SÁCH SINH VIÊN ===");
+        System.out.println(String.format("STT", "Mã SV", "Họ tên", "Điểm TB"));
+        System.out.println("=".repeat(50));
+        
+        for (int i = 0; i < danhSachSV.size(); i++) {
+            SinhVien sv = danhSachSV.get(i);
+            System.out.println(i + 1 + " " + sv.getMaSV() +" " + sv.getHoTen() + " " + sv.getDiemTB());
+        }
+    }
+    // Xóa sinh viên theo mã - remove()
+    public boolean xoasinhvien(String maSV) {
+        for (int i = 0; i < danhSachSV.size(); i++) {
+            if (danhSachSV.get(i).getMaSV().equals(maSV)) {
+                SinhVien svBiXoa = danhSachSV.remove(i);
+                System.out.println("Đã xóa: " + svBiXoa.getHoTen());
+                return true;
+            }
+        }
+        System.out.println("Không tìm thấy sinh viên với mã: " + maSV);
+        return false;
+    }
+    
+    // Sử dụng subList()
+    public void hienThiHaisinhvienDauTien() {
+        if (danhSachSV.size() >= 2) {
+            List<SinhVien> subList = danhSachSV.subList(0, 2);
+            System.out.println("\nHai sinh viên đầu tiên:");
+            subList.forEach(System.out::println);
+        }
+    }
 }
