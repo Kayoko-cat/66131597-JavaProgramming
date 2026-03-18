@@ -16,7 +16,7 @@ public class runMain {
 		for(int i =0 ;i<10 ;i++) {
 		//Nhap 1 phan tu
 		   // in ra mot huong dan cho nguoi dung 
-	//	System.out.println("Moi nhap phan tu thu  " + i + ": ");
+	//System.out.println("Moi nhap phan tu thu  " + i + ": ");
 			System.out.print("a["+ i +"]=");
 		// cho nguoi dung nhap , cat vao bien ta
 		Integer tam = banphim.nextInt();
@@ -24,5 +24,17 @@ public class runMain {
 		dsSoNguyen.add(tam);
 	}
 
-}
+
+	// b.In ra danh sach vua nhap 
+		System.out.println("Danh sach vua nhap la ");
+		for (int i=0; i < dsSoNguyen.size(); i++ ) {
+			// lay gia tri phan tu o vi tri i, cat vao bien tam
+			Integer tam = dsSoNguyen.get(i);
+			System.out.print(tam + " ");
+		}
+		for (Integer x: dsSoNguyen)      {
+			System.out.print(tam + " ");
+		}
+		
+	}	
 }
