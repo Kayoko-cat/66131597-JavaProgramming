@@ -14,5 +14,26 @@ public class ArrayListbacsic {
         danhSachTen.add("Nguyễn Văn A");
         danhSachTen.add("Trần Thị B");
         danhSachTen.add("Lê Văn C");
+     // Thêm tại vị trí cụ thể - add(index, element)
+        danhSachTen.add(1, "Phạm Thị D"); // Chèn vào vị trí 1
+        
+        System.out.println("Danh sách sau khi thêm: " + danhSachTen);
+        
+        // 3. Lấy kích thước - size()
+        System.out.println("\n--- KÍCH THƯỚC ---");
+        System.out.println("Số phần tử: " + danhSachTen.size());
+        
+        // 4. Truy cập phần tử - get()
+        System.out.println("\n--- TRUY CẬP PHẦN TỬ ---");
+        System.out.println("Phần tử thứ 0: " + danhSachTen.get(0));
+        System.out.println("Phần tử thứ 2: " + danhSachTen.get(2));
+        
+        // 5. Cập nhật phần tử - set()
+        System.out.println("\n--- CẬP NHẬT PHẦN TỬ ---");
+        System.out.println("Trước khi cập nhật: " + danhSachTen.get(1));
+        danhSachTen.set(1, "Trần Thị B (Đã đổi tên)");
+        System.out.println("Sau khi cập nhật: " + danhSachTen.get(1));
     }
+   
+    
 }
