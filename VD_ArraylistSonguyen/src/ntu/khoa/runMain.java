@@ -42,11 +42,18 @@ public class runMain {
 			System.out.print(x + " ");
 			if (x % 2 == 0) Soluongphantuchan= Soluongphantuchan +1;
 		}
+		System.out.println("so phan tu chan la: " + Soluongphantuchan);
 	//	hoac
 	//	for (int i=0; i < dsSoNguyen.size(); i++ ) {
-	//		Integer tam = dsSoNguyen.get(i);
+	//	Integer tam = dsSoNguyen.get(i);
 	//		if (tam % 2 == 0) Soluongphantuchan= Soluongphantuchan +1;
 
-		}
-	}	
+		
+	// d. tinh tong cac phan tu : thuat toan cong don
+	int Tong = 0;
+	for (Integer x: dsSoNguyen)  {
+		Tong= Tong +x;
+	}
+	System.out.println("tong tat ca cac phan tu chan la: " + Soluongphantuchan);
+	}
 }
