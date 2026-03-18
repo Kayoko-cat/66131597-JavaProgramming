@@ -32,9 +32,21 @@ public class runMain {
 			Integer tam = dsSoNguyen.get(i);
 			System.out.print(tam + " ");
 		}
-		for (Integer x: dsSoNguyen)      {
-			System.out.print(tam + " ");
-		}
+		//for (Integer x: dsSoNguyen)      {
+		//	System.out.print(x + " ");
+		//}
 		
+		// dem so phan tu chan 
+		int Soluongphantuchan=0;
+		for (Integer x: dsSoNguyen)      {
+			System.out.print(x + " ");
+			if (x % 2 == 0) Soluongphantuchan= Soluongphantuchan +1;
+		}
+	//	hoac
+	//	for (int i=0; i < dsSoNguyen.size(); i++ ) {
+	//		Integer tam = dsSoNguyen.get(i);
+	//		if (tam % 2 == 0) Soluongphantuchan= Soluongphantuchan +1;
+
+		}
 	}	
 }
