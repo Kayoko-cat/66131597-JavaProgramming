@@ -77,5 +77,38 @@ public class run {
 	 for (int i=0; i<N;i++) {
 		 System.out.println(dsHocSinh.get(i).toString());
 	 }
+	 //4a
+	// thêm học sinh
+	 HocSinh hsThem= new HocSinh();
+
+	 System.out.print("Nhập tên hs thêm: ");
+	 hsThem.setTenHS(banphim.nextLine());
+
+	 System.out.print("Nhập tuổi hs thêm: ");
+	 hsThem.setTuoiHS(banphim.nextShort());
+	 banphim.nextLine();
+
+	 System.out.print("Nhập lớp hs thêm: ");
+	 hsThem.setLopHS(banphim.nextLine());
+
+	 dsHocSinh.add(hsThem);
+
+	 // in danh sách sau khi thêm
+	 for (int i = 0; i < dsHocSinh.size(); i++) {
+	     System.out.println(dsHocSinh.get(i).toString());
+	 }
+	 // xóa học sinh tên Hoa
+	 for (int i=0; i<N;i++) {
+		 HocSinh hsTim= dsHocSinh.get(i);
+		 if (hsTim.getTenHS()=="Hoa") {
+			 dsHocSinh.remove(hsTim);
+			 break;
+		 }
+	 }
+	 //in ra
+	 for (int i=0; i<N;i++) {
+		 System.out.println(dsHocSinh.get(i).toString());
+	 }
+	
 	}
 }
