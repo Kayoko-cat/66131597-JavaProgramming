@@ -9,7 +9,7 @@ public class run {
 		
 		HocSinh hs1 = new HocSinh();
 		String TenHS1 =" Trần Văn A";
-		hs1.setTenHS("tenHS1");
+		hs1.setTenHS(TenHS1);
 		short tuoiHS1 = 10;
 		hs1.setTuoiHS(tuoiHS1);
 		String lopHS1 ="8A-12";
@@ -38,8 +38,13 @@ public class run {
 	 System.out.print("Mời nhập tuổi của học sinh thứ 3: ");
 	 short tuoiHS3 = banphim.nextShort();
 	 hs3.setTuoiHS(tuoiHS3);
+	 
+	 banphim.nextLine();
 	 System.out.print("Mời nhập lớp của học sinh thứ 3: ");
 	 String lopHS3 = banphim.nextLine();
 	 hs3.setLopHS(lopHS3);
+	 
+	 // in ra học sinh ra màn hình
+	 System.out.print(hs3.toString());
 	}
 }
