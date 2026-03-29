@@ -1,5 +1,6 @@
 package khoa.ntu;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class run {
@@ -46,5 +47,35 @@ public class run {
 	 
 	 // in ra học sinh ra màn hình
 	 System.out.print(hs3.toString());
+	 
+	// nhập danh sách N học sinh
+	 ArrayList<HocSinh> dsHocSinh = new ArrayList<HocSinh>();
+	 // nhập N
+	 int N=3; // sinh viên code nhập N từ bàn phím
+	 for (int i=0; i<N;i++) {
+	
+		 
+		 // nhập dữ liệu cho học sinh thứ i
+		 HocSinh hsi= new HocSinh();
+		 // hỏi user nhập vào tên
+		 System.out.print("Mời nhập tên của học sinh thứ : " +i); // in ra HD và đợi
+		 String tenHSi = banphim.nextLine();
+		 hsi.setTenHS(tenHSi);
+
+		 // gói vào biến hs3
+		 System.out.print("Mời nhập tuổi của học sinh thứ :  " + i);
+		 short tuoiHSi = banphim.nextShort();
+		 hsi.setTuoiHS(tuoiHSi);
+		 
+		 banphim.nextLine();
+		 System.out.print("Mời nhập lớp của học sinh thứ : "+ i);
+		 String lopHSi = banphim.nextLine();
+		 hsi.setLopHS(lopHSi);
+		 dsHocSinh.add(hsi);
+	 }
+	 // in ra màn hình
+	 for (int i=0; i<N;i++) {
+		 System.out.println(dsHocSinh.get(i).toString());
+	 }
 	}
 }
