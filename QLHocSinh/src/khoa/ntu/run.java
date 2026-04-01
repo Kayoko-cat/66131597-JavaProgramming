@@ -5,110 +5,106 @@ import java.util.Scanner;
 
 public class run {
 
-	public static void main(String[] args) {
-		//2.a tạo mới 2 học sinh, hard code dữ liệu
-		
-		HocSinh hs1 = new HocSinh();
-		String TenHS1 =" Trần Văn A";
-		hs1.setTenHS(TenHS1);
-		short tuoiHS1 = 10;
-		hs1.setTuoiHS(tuoiHS1);
-		String lopHS1 ="8A-12";
-		hs1.setLopHS(lopHS1);
-		
-		HocSinh hs2= new HocSinh("Trần Văn B",(short) 12 , "6C");
-		
-		// IN ra màn hình
-	 System.out.print(hs1.toString());
-	// System.out.print(hs2.toString());
-		
-	 System.out.println("\ntên của hs 2 là: " + hs2.getTenHS());
-	 System.out.println("tên của hs 2 là: " + hs2.getTuoiHS());
-	 System.out.println("tên của hs 2 là: " + hs2.getLopHS());
-	 
-	 // nhập dữ liệu từ bàn phím
-	 Scanner banphim= new Scanner(System.in);
-	 // nhập dữ liệu cho học sinh thứ 3
-	 HocSinh hs3= new HocSinh();
-	 // hỏi user nhập vào tên
-	 System.out.print("Mời nhập tên của học sinh thứ 3: "); // in ra HD và đợi
-	 String tenHS3 = banphim.nextLine();
-	 hs3.setTenHS(tenHS3);
+    public static void main(String[] args) {
 
-	 // gói vào biến hs3
-	 System.out.print("Mời nhập tuổi của học sinh thứ 3: ");
-	 short tuoiHS3 = banphim.nextShort();
-	 hs3.setTuoiHS(tuoiHS3);
-	 
-	 banphim.nextLine();
-	 System.out.print("Mời nhập lớp của học sinh thứ 3: ");
-	 String lopHS3 = banphim.nextLine();
-	 hs3.setLopHS(lopHS3);
-	 
-	 // in ra học sinh ra màn hình
-	 System.out.print(hs3.toString());
-	 
-	// nhập danh sách N học sinh
-	 ArrayList<HocSinh> dsHocSinh = new ArrayList<HocSinh>();
-	 // nhập N
-	 int N=3; // sinh viên code nhập N từ bàn phím
-	 for (int i=0; i<N;i++) {
-	
-		 
-		 // nhập dữ liệu cho học sinh thứ i
-		 HocSinh hsi= new HocSinh();
-		 // hỏi user nhập vào tên
-		 System.out.print("Mời nhập tên của học sinh thứ : " +i); // in ra HD và đợi
-		 String tenHSi = banphim.nextLine();
-		 hsi.setTenHS(tenHSi);
+//        // 1. Tạo 2 học sinh (hard code)
+//        HocSinh hs1 = new HocSinh();
+//        hs1.setTenHS("Trần Văn A");
+//        hs1.setTuoiHS((short) 10);
+//        hs1.setLopHS("8A-12");
+//
+//        HocSinh hs2 = new HocSinh("Trần Văn B", (short) 12, "6C");
+//
+//        System.out.println(hs1.toString());
+//        System.out.println("Tên hs2: " + hs2.getTenHS());
+//        System.out.println("Tuổi hs2: " + hs2.getTuoiHS());
+//        System.out.println("Lớp hs2: " + hs2.getLopHS());
+//
+//        // 2. Nhập học sinh thứ 3
+//        Scanner banphim = new Scanner(System.in);
+//
+//        HocSinh hs3 = new HocSinh();
+//
+//        System.out.print("Nhập tên hs3: ");
+//        hs3.setTenHS(banphim.nextLine());
+//
+//        System.out.print("Nhập tuổi hs3: ");
+//        hs3.setTuoiHS(banphim.nextShort());
+//        banphim.nextLine();
+//
+//        System.out.print("Nhập lớp hs3: ");
+//        hs3.setLopHS(banphim.nextLine());
+//
+//        System.out.println(hs3.toString());
+//
+//        // 3. Nhập danh sách N học sinh
+        ArrayList<HocSinh> dsHocSinh = new ArrayList<HocSinh>();
 
-		 // gói vào biến hs3
-		 System.out.print("Mời nhập tuổi của học sinh thứ :  " + i);
-		 short tuoiHSi = banphim.nextShort();
-		 hsi.setTuoiHS(tuoiHSi);
-		 
-		 banphim.nextLine();
-		 System.out.print("Mời nhập lớp của học sinh thứ : "+ i);
-		 String lopHSi = banphim.nextLine();
-		 hsi.setLopHS(lopHSi);
-		 dsHocSinh.add(hsi);
-	 }
-	 // in ra màn hình
-	 for (int i=0; i<N;i++) {
-		 System.out.println(dsHocSinh.get(i).toString());
-	 }
-	 //4a
-	// thêm học sinh
-	 HocSinh hsThem= new HocSinh();
+        System.out.print("Nhập số lượng học sinh: ");
+        Scanner banphim = new Scanner(System.in);
+		int N = banphim.nextInt();
+        banphim.nextLine();
 
-	 System.out.print("Nhập tên hs thêm: ");
-	 hsThem.setTenHS(banphim.nextLine());
+        for (int i = 0; i < N; i++) {
+            HocSinh hsi = new HocSinh();
 
-	 System.out.print("Nhập tuổi hs thêm: ");
-	 hsThem.setTuoiHS(banphim.nextShort());
-	 banphim.nextLine();
+            System.out.print("Mời nhập tên của học sinh thứ " + (i +1) +": ") ; // in ra HD và đợi	
+   		 String tenHSi = banphim.nextLine();
+   		 hsi.setTenHS(tenHSi);
 
-	 System.out.print("Nhập lớp hs thêm: ");
-	 hsThem.setLopHS(banphim.nextLine());
+   		 // gói vào biến hs3
+   		 System.out.print("Mời nhập tuổi của học sinh thứ " +( i+1) +": ");
+   		 short tuoiHSi = banphim.nextShort();
+   		 hsi.setTuoiHS(tuoiHSi);
+   		 
+   		 banphim.nextLine();
+   		 System.out.print("Mời nhập lớp của học sinh thứ " +  (i+1) +": ");
+   		 String lopHSi = banphim.nextLine();
+   		 hsi.setLopHS(lopHSi);
+   		 
 
-	 dsHocSinh.add(hsThem);
+            dsHocSinh.add(hsi);
+        }
 
-	 // in danh sách sau khi thêm
-	 for (int i = 0; i < dsHocSinh.size(); i++) {
-	     System.out.println(dsHocSinh.get(i).toString());
-	 }
-	 // xóa học sinh tên Hoa
-	 for (int i=0; i<N;i++) {
-		 HocSinh hsTim= dsHocSinh.get(i);
-		 if (hsTim.getTenHS()=="Hoa") {
-			 dsHocSinh.remove(hsTim);
-			 break;
-		 }
-	 }
-	 //in ra
-	 for (int i=0; i<N;i++) {
-		 System.out.println(dsHocSinh.get(i).toString());
-	 }
-	
-	}
-}
+        // 4. In danh sách ban đầu
+        System.out.println("\nDanh sách học sinh:");
+        for (int i = 0; i < dsHocSinh.size(); i++) {
+            System.out.println(dsHocSinh.get(i).toString());
+        }
+
+        // 5. Thêm học sinh
+        HocSinh hsThem= new HocSinh();
+
+   	 System.out.print("Nhập tên hs thêm: ");
+   	 hsThem.setTenHS(banphim.nextLine());
+
+   	 System.out.print("Nhập tuổi hs thêm: ");
+   	 hsThem.setTuoiHS(banphim.nextShort());
+   	 banphim.nextLine();
+
+   	 System.out.print("Nhập lớp hs thêm: ");
+   	 hsThem.setLopHS(banphim.nextLine());
+
+   	 dsHocSinh.add(hsThem);
+
+   	 // in danh sách sau khi thêm
+   	System.out.println("\nDanh sách sau khi thêm:");
+
+   	 for (int i = 0; i < dsHocSinh.size(); i++) {
+   	     System.out.println(dsHocSinh.get(i).toString());
+   	 }
+   	 // xóa học sinh tên Hoa
+   	 for (int i=0; i<N;i++) {
+   		 HocSinh hsTim= dsHocSinh.get(i);
+   		 if (hsTim.getTenHS()==("Hoa")) {
+   			 dsHocSinh.remove(hsTim);
+   			 break;
+   		 }
+   	 }
+   	 //in ra
+   	 for (int i=0; i<N;i++) {
+   		 System.out.println(dsHocSinh.get(i).toString());
+   	 }
+   	
+   	}
+   }
