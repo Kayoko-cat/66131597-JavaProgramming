@@ -76,14 +76,19 @@ public class run {
         HocSinh hsThem= new HocSinh();
 
    	 System.out.print("Nhập tên hs thêm: ");
-   	 hsThem.setTenHS(banphim.nextLine());
-
-   	 System.out.print("Nhập tuổi hs thêm: ");
-   	 hsThem.setTuoiHS(banphim.nextShort());
+   	 String tenHSthem = banphim.nextLine();
+   	hsThem.setTenHS(tenHSthem);
+   	
+	 System.out.print("Nhập tuổi hs thêm: ");
+   	short tuoiHSthem = banphim.nextShort();
+   	hsThem.setTuoiHS(tuoiHSthem);
+   
    	 banphim.nextLine();
 
    	 System.out.print("Nhập lớp hs thêm: ");
-   	 hsThem.setLopHS(banphim.nextLine());
+   	String lopHSthem = banphim.nextLine();
+   	 hsThem.setLopHS(lopHSthem);
+   	 
 
    	 dsHocSinh.add(hsThem);
 
@@ -96,12 +101,13 @@ public class run {
    	 // xóa học sinh tên Hoa
    	 for (int i=0; i<N;i++) {
    		 HocSinh hsTim= dsHocSinh.get(i);
-   		 if (hsTim.getTenHS()==("Hoa")) {
+   		 if (hsTim.getTenHS().equals("Hoa")) {
    			 dsHocSinh.remove(hsTim);
    			 break;
    		 }
    	 }
    	 //in ra
+   	System.out.println("\nDanh sách sau khi xóa:");
    	 for (int i=0; i<N;i++) {
    		 System.out.println(dsHocSinh.get(i).toString());
    	 }
