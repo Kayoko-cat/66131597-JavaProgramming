@@ -26,5 +26,6 @@ fw.write(str);
 } while(str.compareTo("stop") != 0);
 
 fw.close();
+System.out.println("Da ghi xong file!");
 }
 }
