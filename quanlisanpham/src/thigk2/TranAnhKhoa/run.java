@@ -22,6 +22,40 @@ public class run {
         ds.add(new lopsanpham("SP01", "Sua Milo", "Thuc pham", 15000));
         ds.add(new lopsanpham("SP02", "Dau ca", "Thực phẩm chức năng", 120000));
         ds.add(new lopsanpham("SP03", "Banh quy", "Thuc pham", 20000));
-	}
+	
+     // 2. Nhập thêm 1 sản phẩm mới
+        System.out.println("--- Nhap thong tin san pham moi ---");
+        System.out.print("Ma SP: "); String ma = sc.nextLine();
+        System.out.print("Ten SP: "); String ten = sc.nextLine();
+        System.out.print("Loai SP: "); String loai = sc.nextLine();
+        System.out.print("Gia ban: "); double gia = sc.nextDouble();
+    
+        // Them vao danh sach
+        ds.add(new lopsanpham(ma, ten, loai, gia));
+	
+	// 3. In lai toan bo danh sach (Dung ham toString da viet o LopSanPham)
+    System.out.println("\n--- Danh sach tat ca san pham ---");
+    for (lopsanpham sp : ds) {
+        System.out.println(sp.toString());
+    }
 
+    // 4. In cac san pham co loai la "Thực phẩm chức năng"
+    System.out.println("\n--- San pham la 'Thực phẩm chức năng' ---");
+    boolean check = false;
+    for (lopsanpham sp : ds) {
+        // equalsIgnoreCase de so sanh khong phan biet hoa thuong
+        if (sp.getLoaiSP().equalsIgnoreCase("Thực phẩm chức năng")) {
+            System.out.println(sp.toString());
+            check = true;
+        }
+    }
+    
+    if (!check) {
+        System.out.println("Khong co san pham nao thuoc loai nay.");
+    }
+
+    sc.close();
 }
+}
+
+	
