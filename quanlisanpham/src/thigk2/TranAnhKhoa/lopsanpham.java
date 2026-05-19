@@ -1,6 +1,6 @@
 package thigk2.TranAnhKhoa;
 
-// Lưu ý: Tên file phải trùng với tên class (LopSanPham.java)
+
 public class lopsanpham {
     private String maSP;
     private String tenSP;
