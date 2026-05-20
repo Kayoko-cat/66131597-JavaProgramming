@@ -67,5 +67,22 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+    private boolean checkWin(int r, int c) {
+        String p = board[r][c].getText();
+        if (board[r][0].getText().equals(p) && board[r][1].getText().equals(p) && board[r][2].getText().equals(p)) return true;
+        if (board[0][c].getText().equals(p) && board[1][c].getText().equals(p) && board[2][c].getText().equals(p)) return true;
+        if (r == c && board[0][0].getText().equals(p) && board[1][1].getText().equals(p) && board[2][2].getText().equals(p)) return true;
+        if (r + c == 2 && board[0][2].getText().equals(p) && board[1][1].getText().equals(p) && board[2][0].getText().equals(p)) return true;
+        return false;
+    }
 
-  
+    private boolean isBoardFull() {
+        for (int r = 0; r < 3; r++) {
+            for (int c = 0; c < 3; c++) {
+                if (board[r][c].getText().isEmpty()) return false;
+            }
+        }
+        return true;
+    }
+
+   
