@@ -85,4 +85,25 @@ public class Main extends Application {
         return true;
     }
 
-   
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    private void resetBoard() {
+        for (int r = 0; r < 3; r++) {
+            for (int c = 0; c < 3; c++) {
+                board[r][c].setText("");
+            }
+        }
+        xTurn = true;
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+  

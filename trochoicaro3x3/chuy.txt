@@ -1,0 +1,6 @@
+YÊU CẦU ĐỂ CHẠY DỰ ÁN JAVAFX
+Thư viện JavaFX SDK
+Dự án cần được tích hợp các file .jar từ thư mục lib của bộ JavaFX SDK. Để thiết lập, nhấp chuột phải vào tên Project, chọn Properties, chọn Java Build Path, chọn tab Libraries, nhấp vào Classpath và bấm nút Add External JARs để chọn các file .jar.
+Cấu hình VM Arguments
+Đây là lệnh bắt buộc để máy ảo Java kích hoạt được giao diện trực quan. Nhấp chuột phải vào file code chứa hàm main, chọn Run As, chọn Run Configurations. Tại tab Arguments, điền vào ô VM arguments đoạn lệnh sau:
+--module-path "DUONG_DAN_DEN_THU_MUC_LIB_CUA_JAVAFX_SDK" --add-modules javafx.controls,javafx.fxml
